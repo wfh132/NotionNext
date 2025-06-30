@@ -10,6 +10,7 @@ import CONFIG from '../config'
  * @returns
  */
 export default function PostCopyright() {
+  return null}
   const router = useRouter()
   const [path, setPath] = useState(siteConfig('LINK') + router.asPath)
   useEffect(() => {
