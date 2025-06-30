@@ -27,25 +27,16 @@ const Footer = () => {
       <br />
 
       {/* 底部页面信息 */}
-import React, { useState } from 'react';
-
-const Footer = () => {
-  const [showPoweredBy, setShowPoweredBy] = useState(false); // 默认不显示
-
-  return (
-    <footer>
       <div
         id='footer-bottom'
-        className='w-full h-20 flex flex-col p-3 lg:flex-row justify-between px-6 items-center bg-[#f1f3f7] dark:bg-[#21232A] border-t dark:border-t-[#3D3D3F]'
-      >
+        className='w-full h-20 flex flex-col p-3 lg:flex-row justify-between px-6 items-center bg-[#f1f3f7] dark:bg-[#21232A] border-t dark:border-t-[#3D3D3F]'>
         <div id='footer-bottom-left' className='text-center lg:text-start'>
-          {showPoweredBy && <PoweredBy />} {/* 条件渲染 */}
+          <PoweredBy />
           <div className='flex gap-x-1'>
             <CopyRightDate />
             <a
               href={'/about'}
-              className='underline font-semibold dark:text-gray-300 '
-            >
+              className='underline font-semibold dark:text-gray-300 '>
               {siteConfig('AUTHOR')}
             </a>
             {BIO && <span className='mx-1'> | {BIO}</span>}
@@ -71,10 +62,12 @@ const Footer = () => {
             <i className='fas fa-users' />{' '}
             <span className='px-1 busuanzi_value_site_uv'> </span>{' '}
           </span>
+
+          {/* <h1 className='text-xs pt-4 text-light-400 dark:text-gray-400'>{title} {siteConfig('BIO') && <>|</>} {siteConfig('BIO')}</h1> */}
         </div>
       </div>
     </footer>
-  );
-};
+  )
+}
 
-export default Footer;
+export default Footer
